@@ -3,7 +3,6 @@ alphabet_upper = [letter.upper() for letter in alphabet_lower]
 
 def decode(start_text, shift_amount):
     end_text = ""
-    shift_amount += 1
     for char in start_text:
         if char in alphabet_lower:
             position = alphabet_lower.index(char)
@@ -21,3 +20,4 @@ start_text = input("Enter the start text: ")
 print("\nAll possible variations:")
 for shift in range(26):
     print(f"Shift {shift}: {decode(start_text, shift)}")
+
